@@ -2,22 +2,21 @@ package kadai_015;
 
 	//フィールド
 	public class Product{
-		private int gear = 0; 
-		//private int speed = 0;
-		
-		
-		public Product(int gear) {
-			this.gear = gear;
-	}
-		public void gearChange(int afterGear) {
-			System.out.println("ギア"+ this.gear + "から" + afterGear + "に切り替えました");
+		private int gear = 1;  // ギア(初期値)
+		private int speed = 10; // 速度(初期値)
 
+		// ギアチェンジメソッド
+		public void gearChange(int afterGear) {
+			System.out.println("ギア" + this.gear + "から" + afterGear + "に切り替えました");
+			this.gear = afterGear; //ギアを更新(this.gearにafterGearの3を渡す)
 		}
-		public void run(int speed) {
-			System.out.println("速度は時速" + speed + "kmです");
-			
-		}
-}
+
+		// 車を走らせるメソッドrunの引数は空なので引数は空
+		public void run() {
+			this.speed = this.gear * 10; //this.gearに入っている3*10=30をthia.speedに渡す
+			System.out.println("現在の速度は時速" + this.speed + "kmです");
+			}
+	}
 
 
 
