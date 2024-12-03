@@ -19,7 +19,7 @@ package kadai_015;
 			} else {
 				this.speed = this.gear * 10; //1~5の時はthis.gear * 10をthis.speedに渡す
 			}
-			//this.speed = this.gear * 10; //this.gearに入っている3*10=30をthia.speedに渡す
+			//this.gearに入っている3*10=30をthia.speedに渡す
 			System.out.println("現在の速度は時速" + this.speed + "kmです");
 			}
 	}
